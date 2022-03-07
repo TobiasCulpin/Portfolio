@@ -17,12 +17,12 @@ function toggle(elem)
 {
     if (filterStatus[elem.classList])
     {
-        elem.innerHTML = "Off"
+        elem.style.background = "blue"
         filterStatus[elem.classList] = false
     }
     else
     {
-        elem.innerHTML = "On"
+        elem.style.background = "lightBlue"
         filterStatus[elem.classList] = true
     }
 }
