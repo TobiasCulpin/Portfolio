@@ -48,7 +48,12 @@ function hideAll()
 function updateProjects()
 {
     //if show all filter is on then we show all projects and exit function
-    //showAllFilter = document.getElementById("all")
+    showAllFilter = document.getElementById("all")
+    if (filterStatus[showAllFilter.classList])
+    {
+        showAll()
+        return
+    }
 
     //If all filters are off all the projects are shown
     let allFalse = true;
