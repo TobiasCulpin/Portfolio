@@ -47,7 +47,7 @@ function updateProjects()
             {
                 //.indexOf returns -1 if the substring cannot be found
                 //using .indexOf instead of .includes to support Internet Explorer and other old browsers
-                if ((filters[i].className).indexOf(projects[j].className) !== -1)
+                if ((projects[j].className).indexOf(filters[i].className) !== -1)
                 {
                     //show project
                     projects[j].style.display = "block"
