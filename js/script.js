@@ -1,5 +1,8 @@
 //Getting all the button divs under the filters id
 var filters = document.getElementById("filters").querySelectorAll("button")
+//Getting all the project divs under the projects id
+var projects = document.getElementById("projects").querySelectorAll("div")
+document.writeln()
 
 //Generating a map of bools for each filter element to keep track of which are active
 //All are on by default
@@ -24,5 +27,32 @@ function toggle(elem)
     {
         elem.style.background = "lightBlue"
         filterStatus[elem.classList] = true
+    }
+    updateProjects()
+}
+
+
+
+//To be called after a filter button is pressed.  Updates which projects should be shown
+function updateProjects()
+{
+    //Hide the projects at the start and then show if a filter match is made
+    for (let i = 0; i < projects.length; i++) { projects[i].style.display = "none" }
+
+    for (let i = 0; i < filters.length; i++)
+    {
+        if (filterStatus[filters[i].classList] == true)
+        {
+            for (let j = 0; j < projects.length; j++)
+            {
+                //.indexOf returns -1 if the substring cannot be found
+                //using .indexOf instead of .includes to support Internet Explorer and other old browsers
+                if ((filters[i].className).indexOf(projects[j].className) !== -1)
+                {
+                    //show project
+                    projects[j].style.display = "block"
+                }
+            }
+        }
     }
 }
