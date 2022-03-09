@@ -1,3 +1,22 @@
+body
+{
+    background-color: grey;
+}
+
+h1
+{
+    margin-left: 20%;
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 3rem;
+}
+
+h2
+{
+    margin-left: 20%;
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 1rem;
+}
+
 #filters button
 {
     background: lightblue;
@@ -5,4 +24,30 @@
 #filters button:hover
 {
     border-color: blue;
+}
+
+#filters
+{
+    margin-top: 2rem;
+    text-align: center;
+}
+
+#projects
+{
+    --width: 60%;
+    width: var(--width);
+    margin-left: calc((100% - var(--width)) / 2);
+    margin-right: calc((100% - var(--width)) / 2);
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#projects div
+{
+    background-color: lightblue;
+    width: 300px;
+    text-align: center;
+    margin: 2rem auto;
 }
