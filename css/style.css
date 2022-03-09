@@ -34,7 +34,7 @@ h2
 
 #projects
 {
-    --width: 60%;
+    --width: 80%;
     width: var(--width);
     margin-left: calc((100% - var(--width)) / 2);
     margin-right: calc((100% - var(--width)) / 2);
@@ -50,4 +50,5 @@ h2
     width: 300px;
     text-align: center;
     margin: 2rem auto;
+    padding: 1rem;
 }
