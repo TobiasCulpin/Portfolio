@@ -1,6 +1,7 @@
 body
 {
     background-color: grey;
+    margin-left: 100px;
 }
 
 h1
@@ -51,4 +52,14 @@ h2
     text-align: center;
     margin: 2rem auto;
     padding: 1rem;
+}
+
+iframe[seamless] {
+    border: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    height: 100%;
+    width: 100px;
 }
